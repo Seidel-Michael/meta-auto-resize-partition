@@ -9,7 +9,7 @@ if @PARTITION_EXTENDED_ENABLED@; then
 fi
 
 parted @DEVICE@ resizepart @PARTITION@ 100%
-e2fsck -f @DEVICE@p@PARTITION@
+e2fsck -y -f @DEVICE@p@PARTITION@
 resize2fs @DEVICE@p@PARTITION@
 mount @DEVICE@p@PARTITION@
 
