@@ -5,11 +5,11 @@ echo "Resizing Partition @DEVICE@p@PARTITION@ on first boot..."
 umount @DEVICE@p@PARTITION@
 
 if @PARTITION_EXTENDED_ENABLED@; then
-   parted @DEVICE@ resize @PARTITION_EXTENDED@ 100%
+   parted @DEVICE@ resizepart @PARTITION_EXTENDED@ 100%
 fi
 
-parted @DEVICE@ resize @PARTITION@ 100%
-e2fsck -f @DEVICE@p@PARTITION@
+parted @DEVICE@ resizepart @PARTITION@ 100%
+e2fsck -f -a @DEVICE@p@PARTITION@
 resize2fs @DEVICE@p@PARTITION@
 mount @DEVICE@p@PARTITION@
 

@@ -2,6 +2,7 @@
 Description=Automatically resizes the partition to 100% of the available space on the first boot.
 DefaultDependencies=no
 After=local-fs.target
+Before=network-online.target
 
 [Service]
 Type=oneshot
