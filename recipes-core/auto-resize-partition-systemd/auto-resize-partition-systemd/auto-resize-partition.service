@@ -1,6 +1,7 @@
 [Unit]
 Description=Automatically resizes the partition to 100% of the available space on the first boot.
 DefaultDependencies=no
+ConditionPathExists=!/data/etc/disable-auto-resize-partition
 After=local-fs.target
 Before=network-online.target
 
