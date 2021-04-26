@@ -19,11 +19,15 @@ do_install() {
 RDEPENDS_${PN} += " bash parted e2fsprogs-resize2fs"
 
 
-# update_auto_resize(){
+# Add to image Recipe
+
+#update_auto_resize(){
 #    sed -i 's#@DEVICE@#/dev/mmcblk2#g' ${IMAGE_ROOTFS}/usr/bin/auto-resize-partition.sh
 #    sed -i 's#@PARTITION@#6#g' ${IMAGE_ROOTFS}/usr/bin/auto-resize-partition.sh
 #    sed -i 's#@PARTITION_EXTENDED_ENABLED@#true#g' ${IMAGE_ROOTFS}/usr/bin/auto-resize-partition.sh
 #    sed -i 's#@PARTITION_EXTENDED@#4#g' ${IMAGE_ROOTFS}/usr/bin/auto-resize-partition.sh
+#    sed -i 's#@DISABLE_SERVICE_LOCATION@#/data/etc#g' ${IMAGE_ROOTFS}/usr/bin/auto-resize-partition.sh
+#    sed -i 's#@DISABLE_SERVICE_LOCATION@#/data/etc#g' ${IMAGE_ROOTFS}/lib/systemd/system/auto-resize-partition.service
 #}
 
 # ROOTFS_POSTPROCESS_COMMAND += "update_auto_resize;"

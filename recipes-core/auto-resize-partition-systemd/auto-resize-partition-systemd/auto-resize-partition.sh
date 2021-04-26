@@ -13,4 +13,4 @@ e2fsck -f -a @DEVICE@p@PARTITION@
 resize2fs @DEVICE@p@PARTITION@
 mount @DEVICE@p@PARTITION@
 
-touch /data/etc/disable-auto-resize-partition
+touch @DISABLE_SERVICE_LOCATION@/disable-auto-resize-partition
