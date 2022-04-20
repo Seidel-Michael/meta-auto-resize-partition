@@ -4,7 +4,7 @@ DefaultDependencies=no
 ConditionPathExists=!@DISABLE_SERVICE_LOCATION@/disable-auto-resize-partition
 After=data.mount
 Requires=data.mount
-Before=network-online.target
+Before=systemd-networkd.service
 
 [Service]
 Type=oneshot
