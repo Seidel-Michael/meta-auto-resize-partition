@@ -2,9 +2,7 @@
 Description=Automatically resizes the partition to 100% of the available space on the first boot.
 DefaultDependencies=no
 ConditionPathExists=!@DISABLE_SERVICE_LOCATION@/disable-auto-resize-partition
-After=data.mount
-Requires=data.mount
-Before=systemd-networkd.service
+Before=data.mount
 
 [Service]
 Type=oneshot
